@@ -10,12 +10,12 @@ body {
     background-color: #E9E9E9;
     color: var(--jet-black);
     font-family: "Poppins", sans-serif;
-    padding-top: 150px;
 }
 header {
     text-align: center;
-    padding: 15px;
-    position: fixed;
+    position: sticky;
+    padding-top: 1px;
+    padding-bottom: 5px;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -27,6 +27,7 @@ header {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: var(--muted-teal);
+    box-sizing: border-box;
 }
 a {
     color: var(--muted-teal);
