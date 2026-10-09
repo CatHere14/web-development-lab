@@ -10,6 +10,11 @@
     --almond-cream: #e3d5ca;
     --almond-silk: #D5BDAF;
 }
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
 body {
     margin: 0;
     background-color:#ffffff;
@@ -58,8 +63,59 @@ form {
 fieldset {
     margin: 0 0 25px 0;
     padding: 25px;
-    border: 1px solid #D6CCC2;
+    border: 5px solid #D6CCC2;
     border-radius: 10px;
     background-color: var(--almond-cream);
 }
+section legend{
+    font-weight: bold;
+}
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 13px;
+    border: 2px solid var(--bone);
+    border-radius: 15px;
+    background-color: white;
+    font: inherit;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline:none;
+    border-color: #A88678;
+    box-shadow: 0 0 0 3px rgba(168, 134, 120, 0.15);
+}
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #8F7468;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: var(--almond-cream);
+    color: var(--jet-black);
+}
+
+button:hover {
+    filter: brightness(0.95);
+}
+.restart-btn{
+    width: 20px;
+    height: 11px;
+    object-fit: contain;
+}

@@ -41,7 +41,11 @@
                         <input type="radio" id="male" name="gender" value="male" required>
                         <label for="male">Эрэгтэй</label>
                         <input type="radio" id="female" name="gender" value="female" required>
-                        <label for="female">Эмэгтэй</label><br>
+                        <label for="female">Эмэгтэй</label><br><br>
+                        <label for="avatar">Профайл зураг оруулна уу:</label><br>
+                        <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
+                        <label for="bio">Товч танилцуулга / Өөрийн тухай:</label><br>
+                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Өөрийн танилцуулгыг энд бичнэ үү..."></textarea><br>
                     </fieldset>
                     <br>
                     <!-- 2-р бүлэг: Мэргэжил ба Сургалтын мэдээлэл -->
@@ -56,6 +60,8 @@
                         </select><br><br>
                         <label for="school">Сургууль</label><br>
                         <input type="text" id="school" name="school" placeholder="ШУТИС" required><br><br>
+                        <label for="schoolbranch">Салбар Сургууль -- <i>заавал биш</i></label><br>
+                        <input type="text" id="schoolbranch" name="schoolbranch" placeholder="МХТС"><br><br>
                         <label>Сонирхож буй технологиуд:</label><br>
                         <input type="checkbox" id="html" name="skills" value="HTML">
                         <label for="html">HTML5 / CSS3</label><br>
@@ -63,10 +69,6 @@
                         <label for="js">JavaScript</label><br>
                         <input type="checkbox" id="php" name="skills" value="PHP">
                         <label for="php">PHP & MySQL</label><br><br>
-                        <label for="avatar">Профайл зураг оруулна уу:</label><br>
-                        <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
-                        <label for="bio">Товч танилцуулга / Өөрийн тухай:</label><br>
-                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Өөрийн танилцуулгыг энд бичнэ үү..."></textarea><br>
                     </fieldset>
                     <br>
                     <fieldset>
@@ -82,7 +84,7 @@
                     </fieldset>
                     <!-- Илгээх ба Арилгах товчлуурууд -->
                     <button type="submit">Анкет Илгээх</button>
-                    <button type="reset" id="reset">Дахин эхлүүлэх</button>
+                    <button type="reset" id="reset"><img src="restart.png" class="restart-btn">Дахин эхлүүлэх</button>
                 </form>
 
             </section>
