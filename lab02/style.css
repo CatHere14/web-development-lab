@@ -36,12 +36,14 @@ header {
 }
 .headerul {
     display: flex;
+    list-style:none;
     flex-direction: row;
     gap: 15px;
     align-items: center;
     white-space: nowrap;
 }
 .anket {
+    position: relative;
     color: var(--almond-silk);
     margin: 0;
     font-size: 50px;
@@ -117,4 +119,77 @@ button:hover {
     width: 20px;
     height: 11px;
     object-fit: contain;
+}
+.bottom-info{
+    display: flex;
+    gap: 25px;
+    align-items: stretch;
+    margin: 30px 0;
+}
+.interests,.grades{
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+    background-color: var(--parchment);
+    border: 1px solid var(--bone);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+.interests h2,
+.grades h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #be9a8b98;
+}
+.grades table{
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--jet-black);
+    border-radius: 10px;
+    border-color: #A88678;
+    box-shadow: 1px 2px 3px #73737383;
+}
+.grades th,
+.grades td{
+    text-align: left;
+    border-bottom: 1px solid var(--jet-black);
+    border-right: 1px solid var(--jet-black);
+}
+.grades th{
+    padding: 12px 10px;
+}
+.grades td{
+    padding: 5px 10px;
+}
+.grades th:last-child,td:last-child{
+    border-right: none;
+}
+.grades tr:last-child td{
+    border-bottom: none;
+}
+.grades tr td:last-child{
+    text-decoration: underline;
+}
+footer {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: var(--jet-black);
+    text-align: center;
+}
+
+footer p {
+    margin: 15px 0;
+    color: white;
+}
+
+footer a {
+    color: #000000;
+    background-color:var(--linen);
+    border: 1px solid var(--jet-black);
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #000000ae;
 }

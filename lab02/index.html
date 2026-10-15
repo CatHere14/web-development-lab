@@ -16,9 +16,9 @@
         <!-- Навигацийн цэс -->
         <nav>
             <ul class="headerul">
-                <a href="../index.html">Нүүр</a>
-                <a href="#reset">Анкет засах</a>
-                <a href="#">Тусламж</a>
+                <li><a href="../index.html">Нүүр</a></li>
+                <li><a href="#reset">Анкет засах</a></li>
+                <li><a href="#">Тусламж</a></li>
             </ul>
         </nav>
     </header>
@@ -82,8 +82,8 @@
                         <input type="password" id="password" name="password" placeholder="********" required minlength="8"><br><br>
                         <label for="phone">Утасны дугаар:</label><br>
                         <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88112233" required><br><br>
-                        <label for="phone">Эцэг Эхийн Утас</label><br>
-                        <input type="tel" id="phone" name="guardian phone" pattern="[0-9]{8}" placeholder="88112233" required><br><br>  
+                        <label for="p-phone">Эцэг Эхийн Утас</label><br>
+                        <input type="tel" id="p-phone" name="p-phone" pattern="[0-9]{8}" placeholder="88112233" required><br><br>  
                     </fieldset>
                     <!-- Илгээх ба Арилгах товчлуурууд -->
                     <button type="submit">Анкет Илгээх</button>
@@ -93,43 +93,45 @@
             </section>
         </article>
      <!-- Сонирхлын жагсаалт -->
-        <section>
-            <h2>Миний сонирхол</h2>
-            <ul>
-            <li>Веб хөгжүүлэлт</li>
-            <li>Код бичих</li>
-            <li>Аниме үзэх</li>
-            <li>Бичлэг эвлүүлэх</li>
-            <li>Судалгаа хийх</li>
-            <li>Ном & LN унших</li>
-            </ul>
-        </section>
-        <!-- Дүнгийн хүснэгт -->
-        <section>
-            <h2>Миний дүн</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Хичээл</th>
-                        <th>Дүн</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Математик</td>
-                        <td>95</td>
-                    </tr>
-                    <tr>
-                        <td>Монгол хэл</td>
-                        <td>88</td>
-                    </tr>
-                    <tr>
-                        <td>Байгалийн ухаан</td>
-                        <td>92</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <div class="bottom-info">
+            <section class="interests">
+                <h2>Миний сонирхол</h2>
+                <ul>
+                <li>Веб хөгжүүлэлт</li>
+                <li>Код бичих</li>
+                <li>Аниме үзэх</li>
+                <li>Бичлэг эвлүүлэх</li>
+                <li>Судалгаа хийх</li>
+                <li>Ном & LN унших</li>
+                </ul>
+            </section>
+            <!-- Дүнгийн хүснэгт -->
+            <section class="grades">
+                <h2>Миний дүн</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Хичээл</th>
+                            <th>Дүн</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Математик</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>Монгол хэл</td>
+                            <td>88</td>
+                        </tr>
+                        <tr>
+                            <td>Байгалийн ухаан</td>
+                            <td>92</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </main>
     <!-- Хөл хэсэг -->
     <footer>
