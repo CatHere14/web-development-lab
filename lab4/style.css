@@ -157,32 +157,59 @@ main {
     margin: 0;
     color: var(--color-muted);
 }
+/* Utasniihig ni defaultaar */
+.header {
+    flex-direction: column;
+}
 
-@media (max-width: 1000px) {
+.header-ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+}
+
+.page-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.anime-cards {
+    grid-template-columns: 1fr;
+}
+
+.cards img {
+    height: 230px;
+}
+/* Tablet */
+@media (min-width: 600px) {
     .anime-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
-@media (max-width: 650px) {
+/* Computer */
+@media (min-width: 1000px) {
     .header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .header-ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 20px;
     }
 
     .page-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 30px;
     }
 
     .anime-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 18px;
     }
 
     .cards img {
-        height: 230px;
+        height: 500px;
     }
 }
