@@ -157,6 +157,7 @@ main {
     margin: 0;
     color: var(--color-muted);
 }
+
 /* Utasniihig ni defaultaar */
 .header {
     flex-direction: column;
