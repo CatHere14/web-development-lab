@@ -374,3 +374,101 @@ body.flip-all .card-inner {
         transform: translateY(0);
     }
 }
+.preview-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.preview-title {
+    color: var(--color-muted);
+    font-weight: 500;
+}
+
+.preview-controls input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.preview-controls label {
+    padding: 7px 12px;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.preview-controls input:checked + label {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.preview-controls input:focus-visible + label {
+    outline: 2px solid var(--color-primary-hover);
+    outline-offset: 3px;
+}
+body:has(#preview-phone:checked) .header,
+body:has(#preview-phone:checked) main,
+body:has(#preview-phone:checked) .footer {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body:has(#preview-phone:checked) .header {
+    flex-direction: column;
+}
+
+body:has(#preview-phone:checked) .header-ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+}
+
+body:has(#preview-phone:checked) .page-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+body:has(#preview-phone:checked) .anime-cards {
+    grid-template-columns: 1fr;
+}
+body:has(#preview-tablet:checked) .header,
+body:has(#preview-tablet:checked) main,
+body:has(#preview-tablet:checked) .footer {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body:has(#preview-tablet:checked) .header {
+    flex-direction: column;
+}
+
+body:has(#preview-tablet:checked) .header-ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+}
+
+body:has(#preview-tablet:checked) .page-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+body:has(#preview-tablet:checked) .anime-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+body:has(#preview-desktop:checked) .header,
+body:has(#preview-desktop:checked) main,
+body:has(#preview-desktop:checked) .footer {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
