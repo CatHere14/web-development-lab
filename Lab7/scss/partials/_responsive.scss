@@ -43,3 +43,59 @@
   from { opacity: 0; transform: translateY(fn.rem(20px)); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Device preview controls */
+
+body:has(#preview-phone:checked) {
+  .site-header,
+  main,
+  .media-section {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .anime-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body:has(#preview-tablet:checked) {
+  .site-header,
+  main,
+  .media-section {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+body:has(#preview-desktop:checked) {
+  .site-header,
+  main,
+  .media-section {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
