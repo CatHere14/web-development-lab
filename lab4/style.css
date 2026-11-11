@@ -468,7 +468,7 @@ body:has(#preview-tablet:checked) .anime-cards {
 body:has(#preview-desktop:checked) .header,
 body:has(#preview-desktop:checked) main,
 body:has(#preview-desktop:checked) .footer {
-    max-width: 1500px;
+    max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
 }
