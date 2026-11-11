@@ -1,0 +1,98 @@
+@use "tokens" as *;
+@use "functions" as fn;
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: fn.rem(25px) fn.rem(18px);
+  perspective: 1000px;
+}
+
+.anime-card {
+  min-width: 0;
+  min-height: fn.rem(390px);
+  background: transparent;
+  border-radius: var(--radius-card);
+  perspective: 1000px;
+  animation: card-appear 0.6s ease both;
+  animation-delay: calc(var(--i) * 0.12s);
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    min-height: fn.rem(390px);
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: var(--radius-card);
+  }
+
+  &:hover &__inner,
+  &:focus-within &__inner,
+  body.flip-all &__inner {
+    transform: rotateY(180deg);
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: 2px 2px 5px var(--color-shadow);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  &__front {
+    img {
+      display: block;
+      width: 100%;
+      height: fn.rem(330px);
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    h3 {
+      margin: 0;
+      padding: fn.rem(12px);
+      font-size: fn.rem(15.2px);
+      line-height: 1.5;
+    }
+  }
+
+  &:hover &__front img,
+  &:focus-within &__front img {
+    transform: scale(1.04);
+  }
+
+  &__back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: fn.rem(18px);
+    transform: rotateY(180deg);
+    text-align: left;
+
+    h3 { margin: 0 0 fn.rem(10px); color: var(--color-primary); }
+    p { margin: fn.rem(5px) 0; font-size: fn.rem(14px); line-height: 1.4; }
+
+    a {
+      display: inline-block;
+      margin-top: fn.rem(12px);
+      padding: fn.rem(9px) fn.rem(12px);
+      border-radius: var(--radius-button);
+      background: var(--color-primary);
+      color: fn.contrast(#9475B8);
+      text-align: center;
+
+      &:hover, &:focus { background: var(--color-primary-hover); }
+    }
+  }
+}
+
+$spaces: (1: 4px, 2: 8px, 3: 12px, 4: 16px);
+@each $name, $value in $spaces {
+  .u-gap-#{$name} { gap: $value; }
+}

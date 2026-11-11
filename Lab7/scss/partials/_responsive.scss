@@ -1,0 +1,45 @@
+@use "tokens" as *;
+@use "mixins" as mx;
+@use "functions" as fn;
+
+@include mx.respond("tablet") {
+  .anime-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include mx.respond("desktop") {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-nav__list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: fn.rem(20px);
+  }
+
+  .page-layout {
+    grid-template-columns: fn.rem(220px) minmax(0, 1fr);
+    gap: fn.rem(30px);
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes card-appear {
+  from { opacity: 0; transform: translateY(fn.rem(20px)); }
+  to { opacity: 1; transform: translateY(0); }
+}

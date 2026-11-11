@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 - AniCat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>
+            Ani<span class="site-header__accent">Cat</span>
+            <svg class="site-header__logo" viewBox="0 0 40 40" role="img" aria-label="Cat logo">
+                <path d="M7 15 6 5l10 6h8l10-6-1 10c3 3 4 7 3 12-2 7-8 10-17 10S4 34 3 27c-1-5 1-9 4-12Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <circle cx="14" cy="23" r="2" fill="currentColor"/>
+                <circle cx="26" cy="23" r="2" fill="currentColor"/>
+                <path d="M18 29h4m-2-2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </h1>
+        <nav>
+            <ul class="site-nav__list">
+                <li><a href="../index.html">Нүүр</a></li>
+                <li><a href="#browse">Ухах</a></li>
+                <li><a href="#genre">Төрөл</a></li>
+                <li><a href="../lab02/index.html">Оюутны анкет</a></li>
+                <li><a href="#about">Тухай</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Хүссэн Аниме-ээ үз</h2>
+            <p>Цагийг хөгжилтэй өнгөрөөгөөрэй</p>
+        </section>
+
+        <div class="page-layout" id="browse">
+            <aside class="genre-sidebar" id="genre">
+                <h2>Төрөл</h2>
+                <ul class="genre-sidebar__list">
+                    <li><a href="#browse">Бүгд</a></li>
+                    <li><a href="#adventure">Адал явдал</a></li>
+                    <li><a href="#sci-fi">Уран зөгнөл</a></li>
+                    <li><a href="#reincarnation">Дахин төрөлт</a></li>
+                    <li><a href="#romance">Хайр дурлал</a></li>
+                    <li><a href="#time-travel">Цаг хугацааны аялал</a></li>
+                </ul>
+            </aside>
+
+            <section class="anime-section">
+                <h2>Аниме Цуглуулга</h2>
+                <p class="anime-section__help">Карт дээр хулганаа байрлуулах эсвэл keyboard-аар сонгоход мэдээлэл гарна.</p>
+
+                <div class="anime-grid">
+                    <article class="anime-card" id="reincarnation" style="--i: 1">
+                        <div class="anime-card__inner">
+                            <div class="anime-card__front">
+                                <img src="img/Rezero.png" alt="Re:Zero poster">
+                                <h3>RE:Zero</h3>
+                            </div>
+                            <div class="anime-card__back">
+                                <h3>RE:Zero</h3>
+                                <p><strong>Seasons:</strong> 4</p>
+                                <p><strong>Episodes:</strong> 85</p>
+                                <p><strong>Creator:</strong> Tappei Nagatsuki</p>
+                                <p><strong>Studio:</strong> White Fox</p>
+                                <a href="https://hianime.at/rezero-starting-life-in-another-world-1387" target="_blank" rel="noopener noreferrer">Watch anime</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="anime-card" id="time-travel" style="--i: 2">
+                        <div class="anime-card__inner">
+                            <div class="anime-card__front">
+                                <img src="img/steinsgate.png" alt="Steins;Gate poster">
+                                <h3>Steins;Gate</h3>
+                            </div>
+                            <div class="anime-card__back">
+                                <h3>Steins;Gate</h3>
+                                <p><strong>Seasons:</strong> 1 main TV season</p>
+                                <p><strong>Episodes:</strong> 24</p>
+                                <p><strong>Creator:</strong> 5pb. / Nitroplus</p>
+                                <p><strong>Studio:</strong> White Fox</p>
+                                <a href="https://hianime.at/steinsgate-872" target="_blank" rel="noopener noreferrer">Watch anime</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="anime-card" id="romance" style="--i: 3">
+                        <div class="anime-card__inner">
+                            <div class="anime-card__front">
+                                <img src="img/SeishunButa.png" alt="Bunny Girl Senpai poster">
+                                <h3>Rascal Does not Dream of Bunny Girl Senpai</h3>
+                            </div>
+                            <div class="anime-card__back">
+                                <h3>Bunny Girl Senpai</h3>
+                                <p><strong>Seasons:</strong> 2 TV seasons</p>
+                                <p><strong>Episodes:</strong> 26</p>
+                                <p><strong>Creator:</strong> Hajime Kamoshida</p>
+                                <p><strong>Studio:</strong> CloverWorks</p>
+                                <a href="https://hianime.at/rascal-does-not-dream-of-bunny-girl-senpai-626" target="_blank" rel="noopener noreferrer">Watch anime</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="anime-card" id="sci-fi" style="--i: 4">
+                        <div class="anime-card__inner">
+                            <div class="anime-card__front">
+                                <img src="img/linkclick.png" alt="Link Click poster">
+                                <h3>Link Click</h3>
+                            </div>
+                            <div class="anime-card__back">
+                                <h3>Link Click</h3>
+                                <p><strong>Seasons:</strong> 3 (ongoing)</p>
+                                <p><strong>Episodes:</strong> 24 in Seasons 1–2</p>
+                                <p><strong>Creator:</strong> Li Haoling</p>
+                                <p><strong>Studio:</strong> LAN Studio</p>
+                                <a href="https://hianime.at/link-click-1537" target="_blank" rel="noopener noreferrer">Watch anime</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="anime-card" id="adventure" style="--i: 5">
+                        <div class="anime-card__inner">
+                            <div class="anime-card__front">
+                                <img src="img/aot.png" alt="Attack on Titan poster">
+                                <h3>Attack On Titan</h3>
+                            </div>
+                            <div class="anime-card__back">
+                                <h3>Attack on Titan</h3>
+                                <p><strong>Seasons:</strong> 4</p>
+                                <p><strong>Episodes:</strong> 94</p>
+                                <p><strong>Creator:</strong> Hajime Isayama</p>
+                                <p><strong>Studio:</strong> WIT Studio / MAPPA</p>
+                                <a href="https://hianime.at/attack-on-titan-240" target="_blank" rel="noopener noreferrer">Watch anime</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="anime-card" id="apothecary" style="--i: 6">
+                        <div class="anime-card__inner">
+                            <div class="anime-card__front">
+                                <img src="img/apothecary.png" alt="The Apothecary Diaries poster">
+                                <h3>Apothecary Diaries</h3>
+                            </div>
+                            <div class="anime-card__back">
+                                <h3>The Apothecary Diaries</h3>
+                                <p><strong>Seasons:</strong> 3</p>
+                                <p><strong>Episodes:</strong> 72 listed across 3 seasons</p>
+                                <p><strong>Creator:</strong> Natsu Hyūga</p>
+                                <p><strong>Studio:</strong> TOHO animation STUDIO / OLM</p>
+                                <a href="https://hianime.at/the-apothecary-diaries-438" target="_blank" rel="noopener noreferrer">Watch anime</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <section class="media-section">
+            <h2>Anime video</h2>
+            <video controls preload="metadata">
+                <source src="video/clip.mp4" type="video/mp4">
+                <source src="video/clip.webm" type="video/webm">
+                <track src="video/clip.mn.vtt" kind="captions" srclang="mn" label="Монгол хадмал" default>
+                Таны browser video тоглуулах боломжгүй байна.
+            </video>
+            <p class="media-section__note">Видео үзүүлэхийн тулд өөрийн clip.mp4, clip.webm болон clip.mn.vtt файлуудыг video хавтаст хийнэ.</p>
+        </section>
+        <section class="media-section">
+            <h2>Anime Trailer</h2>
+            <iframe
+                src="https://www.youtube-nocookie.com/embed/fQ6PRbh-ntM"
+                title="Anime trailer"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="about">
+        <p>&copy; 2026 Веб зохиомж хичээл. B252270016</p>
+        <div class="site-footer__controls">
+            <button type="button" id="theme-button">Dark mode</button>
+            <button type="button" id="flip-button">Flip all cards</button>
+        </div>
+    
+        <div class="preview-controls" role="group" aria-label="Choose website preview size">
+            <span class="preview-title">Preview:</span>
+
+            <input type="radio" name="device-preview" id="preview-phone">
+            <label for="preview-phone">Phone</label>
+
+            <input type="radio" name="device-preview" id="preview-tablet">
+            <label for="preview-tablet">Tablet</label>
+
+            <input type="radio" name="device-preview" id="preview-desktop" checked>
+            <label for="preview-desktop">Desktop</label>
+        </div>
+    </footer>
+    
+</body>
+</html>

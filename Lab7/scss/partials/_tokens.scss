@@ -1,0 +1,31 @@
+$colors: (
+  "bg": #FAF7F0,
+  "surface": #FFFDF8,
+  "primary": #9475B8,
+  "primary-hover": #7C5C9F,
+  "accent": #E8DDF2,
+  "text": #302B35,
+  "muted": #827B85,
+  "border": #E9E2D8,
+  "shadow": #4d4a4a4f
+);
+
+$radii: (
+  "card": 10px,
+  "button": 6px
+);
+
+$breakpoints: (
+  "tablet": 600px,
+  "desktop": 1000px
+);
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $radii {
+    --radius-#{$name}: #{$value};
+  }
+}

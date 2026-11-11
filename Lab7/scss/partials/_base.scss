@@ -1,0 +1,36 @@
+@use "tokens" as *;
+@use "functions" as fn;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--color-text);
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+}
+
+body.dark-mode {
+  --color-bg: #201D25;
+  --color-surface: #302B36;
+  --color-primary: #C4A6E8;
+  --color-primary-hover: #E0C9FF;
+  --color-accent: #3B3048;
+  --color-text: #F5EFFA;
+  --color-muted: #C6B9D1;
+  --color-border: #51465C;
+  --color-shadow: #00000070;
+}

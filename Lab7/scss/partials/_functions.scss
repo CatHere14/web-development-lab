@@ -1,0 +1,11 @@
+@function rem($pixels) {
+  @return ($pixels / 16px) * 1rem;
+}
+
+@function contrast($background) {
+  @if lightness($background) > 55% {
+    @return #302B35;
+  } @else {
+    @return #FFFFFF;
+  }
+}
