@@ -5,14 +5,14 @@
 }
 
 :root {
-    --bg-color: #102b30;
-    --surface-color: #183f45;
-    --surface-hover: #24565c;
-    --primary-color: #55c3bd;
-    --text-color: #f1f5f5;
-    --muted-color: #b7c9ca;
-    --border-color: #386168;
-    --input-bg: #f5f7f7;
+    --bg-color: #F4F5F0;
+    --surface-color: #FFFFFF;
+    --surface-hover: #EAEDE5;
+    --primary-color: #8FAF9B;
+    --text-color: #343D38;
+    --muted-color: #89938B;
+    --border-color: #E1E6DE;
+    --input-bg: #FAFBF8;
 }
 
 html {
